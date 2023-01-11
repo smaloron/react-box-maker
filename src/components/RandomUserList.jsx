@@ -32,9 +32,9 @@ export default function RandomUserList (props) {
                     {user.name.first} {user.name.last}
                 </td>
                 <td>
-                    {user.location.street.number}
+                    {user.location.street.number}&nbsp;
                     {user.location.street.name} <br />
-                    {user.location.postcode}
+                    {user.location.postcode}&nbsp;
                     {user.location.city} <br />
                     {user.location.country}
                 </td>

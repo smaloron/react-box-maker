@@ -28,7 +28,7 @@ function App () {
       <SwapiList />
 
       <RandomUserList
-        gender="female" nat="fr" results="10"
+        gender="male" nat="es" results="5"
       />
 
 
