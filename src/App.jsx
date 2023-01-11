@@ -2,6 +2,8 @@ import { useState } from 'react'
 import './App.css'
 import BoxForm from './components/BoxForm'
 import BoxList from './components/BoxList';
+import UseEffectBasic from './components/UseEffectBasic';
+import UseEffectStorage from './components/UseEffectStorage';
 
 function App () {
   const [boxes, setBoxes] = useState([]);
@@ -22,6 +24,10 @@ function App () {
     <div className="App">
       <BoxForm newBox={addBox} />
       <BoxList boxes={boxes} delete={removeBox} />
+
+      <UseEffectBasic />
+
+      <UseEffectStorage />
     </div>
   )
 }
