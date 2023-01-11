@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import BoxForm from './components/BoxForm'
 import BoxList from './components/BoxList';
+import RandomUserList from './components/RandomUserList';
 import UseEffectFetch from './components/swapi-simple';
 import SwapiList from './components/SwapiList';
 import UseEffectBasic from './components/UseEffectBasic';
@@ -25,6 +26,10 @@ function App () {
   return (
     <div className="App">
       <SwapiList />
+
+      <RandomUserList
+        gender="female" nat="fr" results="10"
+      />
 
 
     </div>
