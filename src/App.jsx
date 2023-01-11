@@ -2,6 +2,8 @@ import { useState } from 'react'
 import './App.css'
 import BoxForm from './components/BoxForm'
 import BoxList from './components/BoxList';
+import UseEffectFetch from './components/swapi-simple';
+import SwapiList from './components/SwapiList';
 import UseEffectBasic from './components/UseEffectBasic';
 import UseEffectStorage from './components/UseEffectStorage';
 
@@ -22,12 +24,9 @@ function App () {
 
   return (
     <div className="App">
-      <BoxForm newBox={addBox} />
-      <BoxList boxes={boxes} delete={removeBox} />
+      <SwapiList />
 
-      <UseEffectBasic />
 
-      <UseEffectStorage />
     </div>
   )
 }
