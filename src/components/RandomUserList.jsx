@@ -15,6 +15,7 @@ export default function RandomUserList (props) {
 
     useEffect(() => {
         async function fetchUsers () {
+            console.log(getUrl())
             const { data } = await axios.get(getUrl());
             setUserList(data.results);
         }
@@ -24,7 +25,7 @@ export default function RandomUserList (props) {
 
     function getOneUser (user) {
         return (
-            <tr>
+            <tr key={user.id.value}>
                 <td>
                     <img src={user.picture.large} />
                 </td>

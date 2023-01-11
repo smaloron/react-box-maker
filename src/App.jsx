@@ -1,34 +1,28 @@
 import { useState } from 'react'
 import './App.css'
-import BoxForm from './components/BoxForm'
-import BoxList from './components/BoxList';
+
+import RandomUserForm from './components/RandomUserForm';
 import RandomUserList from './components/RandomUserList';
 import UseEffectFetch from './components/swapi-simple';
 import SwapiList from './components/SwapiList';
-import UseEffectBasic from './components/UseEffectBasic';
-import UseEffectStorage from './components/UseEffectStorage';
 
 function App () {
-  const [boxes, setBoxes] = useState([]);
+  const [search, setSearch] = useState({
+    gender: 'female', nat: 'es', results: 5, key: 'femalees5'
+  });
 
-
-  function addBox (boxData) {
-    setBoxes([...boxes, boxData]);
-    console.log(boxes);
-  }
-
-  function removeBox (index) {
-    const newState = [...boxes];
-    newState.splice(index, 1);
-    setBoxes(newState);
+  function launchSearch (data) {
+    setSearch(data);
   }
 
   return (
     <div className="App">
       <SwapiList />
 
+      <RandomUserForm search={launchSearch} />
+
       <RandomUserList
-        gender="male" nat="es" results="5"
+        gender={search.gender} nat={search.nat} results={search.results} key={search.key}
       />
 
 
